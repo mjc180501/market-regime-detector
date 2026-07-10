@@ -27,7 +27,7 @@ Then, I attempted to do some comparisons. I compared according to the NMI and AR
 
 Both NMI and ARI were close to zero, indicating very little agreement between the full-data clustering and the walk-forward clustering. This initially appears surprising, since both methods operate on the same features. However, the walk-forward approach repeatedly retrains K-means on a changing dataset, causing cluster centers to move over time. Small changes in the fitted centroids can produce different cluster assignments, particularly near cluster boundaries. As a result, much of the disagreement likely reflects instability introduced by repeated refitting rather than fundamentally different market structure.
 Additionally, K-means cluster labels are arbitrary. Cluster "0" from one fit does not necessarily correspond to cluster "0" from another fit. While ARI and NMI account for label permutations, the visual comparison can still appear more chaotic unless clusters are explicitly aligned between successive fits.
-![Timeline](figure_1.png)
+![Timeline](Figure_1.png)
 Looking at Figure 1, which is the timeline strip image you can see that the clusters don't seem to match up very well. While most of the original clustering data is characterized by long periods of stability in classification, the walk forward interpretation produce constant flickering and unique classifications. I believe that this disagreement has to do with being driven substantially by label instability from frequent refitting, not by the methods measuring different things.
 
 # Limitations / Future Work
