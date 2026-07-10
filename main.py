@@ -130,6 +130,7 @@ def walk_forward():
     print(df_roll["Cluster"].value_counts())
     return df_roll
 
+# i put it in a function just to keep things more polished
 df_roll = walk_forward()
 
 # now that ive been able to make the clusters this way, i want to compare these clusters with the ones i created from the full data
