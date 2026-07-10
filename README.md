@@ -34,7 +34,7 @@ Looking at Figure 1, which is the timeline strip image you can see that the clus
 
 I did not try to match/align clusters between fits, refit frequency wasn't tuned, and a longer interval would likely reduce the flickering. VolumeChange is a noisy single-day feature and a smoothed version might improve stability. This is also an exploratory and descriptive project, so I am not looking for a validated trading signal. With more work, all of these problems could get addressed, and I could also dig further into the mismatch between clusters formed by the two methods.
 
-# conclusion
+# Conclusion
 This project explored whether market regimes could be identified using unsupervised learning on a small set of technical features. When K-means was trained on the full dataset, the resulting clusters corresponded to intuitive periods of market behavior such as sustained bull markets and high-volatility crashes. However, a more realistic walk-forward implementation produced substantially less stable assignments, with very little agreement between the two approaches according to ARI and NMI.
 
 These results suggest that while K-means can discover meaningful structure in historical market data, the identified regimes are sensitive to the training window and refitting procedure. Future work could investigate more stable clustering methods, align cluster labels between refits, explore alternative features, or compare against probabilistic models such as Gaussian Mixture Models or Hidden Markov Models.
